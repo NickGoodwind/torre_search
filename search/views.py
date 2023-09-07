@@ -14,6 +14,7 @@ def index(request):
 def search(request):
     # Get query parameters
     query = request.GET['q']
+    page = request.GET['page']
     if not query:
         return render(
             request,
@@ -45,7 +46,7 @@ def search(request):
 
     # Show table
     table = SearchTable(resultSet)
-    table.paginate(per_page=10)
+    table.paginate(page= page, per_page=10)
     return render(request, "search/results.html", {"table": table, "title": "Search results"})
 
 

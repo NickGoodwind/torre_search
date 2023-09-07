@@ -11,73 +11,93 @@
 
 html,
 body {
-	background-color: root.$main-color;
+  background-color: root.$main-color;
 }
 
 label {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .wrap {
-	color: white;
-	font-family: 'Orkney Light', ui-monospace;
-	font-size: 20px;
-	
-	&.pages {
-		padding: inherit {
-			left: 50px;
-			right: 50px;
-		}
-	}
+  color: white;
+  font-family: 'Orkney Light', ui-monospace;
+  font-size: 20px;
 
-	& > .container {
-		flex-direction: column;
-		align-items: center;
-		
-		padding: 0;
-		
-		color: white;
-	}
+  &.pages {
+    padding: inherit {
+      left: 50px;
+      right: 50px;
+    }
+  }
+
+  & > .container {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+
+    color: white;
+  }
 }
 
 .breadcrumb {
-	margin-top: 25px;
-	width: 50%;
+  margin-top: 25px;
+  width: 50%;
 }
 
 .title {
-	margin: 2% 0 2% 0;
+  margin: 2% 0 2% 0;
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
-	font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
 }
-
 
 .pages-container {
-	@extend %flexy-col;
-	width: 90%;
+  @extend %flexy-col;
+  width: 90%;
 
-	margin: auto {
-		top: 2em;
-		bottom: 60px;
-	}
+  margin: auto {
+    top: 2em;
+    bottom: 60px;
+  }
 
-	& .breadcrumb {
-		align-self: flex-end;
+  & .breadcrumb {
+    align-self: flex-end;
 
-		margin-bottom: 0;
-		padding-right: 2em;
+    margin-bottom: 0;
+    padding-right: 2em;
 
-		text-align: right;
-		background-color: transparent;
-	}
+    text-align: right;
+    background-color: transparent;
+  }
 }
 
-.site-error {
-	@extend %flexy-col;
-	
-	height: 85vh;
+.page-results {
+  & .table {
+    background-color: root.$base-color;
+
+    & a {
+      color: root.$link-color;
+      text-decoration: none;
+    }
+
+    & > :not(caption) > * > * {
+      color: root.$base-text-color;
+    }
+  }
+
+  .page-link {
+    color: root.$base-text-color;
+    background-color: root.$main-color;
+    border-color: root.$link-color;
+  }
+
+  .active > .page-link {
+    color: root.$base-text-color;
+    background-color: root.$scnd-color;
+    border-color: root.$scnd-color;
+  }
 }

@@ -461,7 +461,6 @@ a.desc:after {
 }
 
 .round {
-  overflow: hidden;
   border-radius: 5px;
 }
 
@@ -469,7 +468,7 @@ a.desc:after {
   padding-bottom: 1em;
 }
 
-.pages-container, .footer, .form-basic, .flexy-col, .flexy-row {
+.footer, .form-basic, .flexy-col, .flexy-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,7 +482,7 @@ a.desc:after {
   margin-right: -15px;
 }
 
-.pages-container, .footer, .form-basic, .flexy-col {
+.footer, .form-basic, .flexy-col {
   flex-direction: column;
   align-items: center;
 }
@@ -858,175 +857,4 @@ a.desc:after {
   height: 400px;
 }
 
-.navbar {
-  z-index: 100 !important;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: auto;
-  font-family: "Monserrat Light", ui-monospace;
-  font-size: 16px;
-}
-.navbar#navbar.navbar-inverse {
-  background-color: rgb(36, 36, 36);
-}
-.navbar#navbar .logo-pages {
-  border-radius: 5px;
-  width: 140px;
-  height: 94px;
-}
-.navbar.navbar-inverse {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: none;
-}
-.navbar .container {
-  width: 100%;
-}
-
-.affix.navbar.navbar-inverse {
-  background-color: white;
-  border: 1px solid rgb(241, 141, 25);
-}
-.affix #nav-menu > li > a {
-  color: black;
-}
-.affix .cart {
-  opacity: 1;
-}
-.affix .cart .cart-items {
-  border: solid 1px rgb(241, 141, 25);
-}
-
-.navbar-header {
-  display: flex;
-  align-items: center;
-}
-
-#nav-menu > li > a, .navbar-inverse .navbar-nav > li > a {
-  color: white;
-}
-#nav-menu > li.active > a, .navbar-inverse .navbar-nav > li.active > a {
-  background-color: transparent;
-  color: rgb(241, 141, 25);
-}
-#nav-menu > li > a:hover, .navbar-inverse .navbar-nav > li > a:hover {
-  color: rgb(241, 141, 25);
-}
-
-.cart {
-  position: absolute;
-  right: 0.8em;
-  top: 2.3em;
-  padding-top: 0.5em;
-  padding-left: 0.4em;
-  border-radius: 1em;
-  background-color: rgb(241, 141, 25);
-  opacity: 0.5;
-  color: white;
-  font-size: 20px;
-  height: 2em;
-  width: 2em;
-}
-.cart:hover {
-  color: rgba(0, 0, 0, 0.4);
-}
-.cart .cart-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -0.6em;
-  right: -0.6em;
-  border-radius: 0.75em;
-  background-color: white;
-  color: black;
-  font-family: "Monserrat Light", ui-monospace;
-  font-size: 14px;
-  width: 1.5em;
-  height: 1.5em;
-}
-
-/* ----------------------------------------------------------------------------------------
-							REQUIRED CLAUSES
----------------------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------------
-							PROJECT'S CUSTOM CSS
----------------------------------------------------------------------------------------- */
-html,
-body {
-  background-color: rgb(51, 51, 51);
-}
-
-label {
-  font-weight: normal;
-}
-
-.wrap {
-  color: white;
-  font-family: "Orkney Light", ui-monospace;
-  font-size: 20px;
-}
-.wrap.pages {
-  padding: inherit;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-.wrap > .container {
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  color: white;
-}
-
-.breadcrumb {
-  margin-top: 25px;
-  width: 50%;
-}
-
-.title {
-  margin: 2% 0 2% 0;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  font-size: 16px;
-}
-
-.pages-container {
-  width: 90%;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 60px;
-}
-.pages-container .breadcrumb {
-  align-self: flex-end;
-  margin-bottom: 0;
-  padding-right: 2em;
-  text-align: right;
-  background-color: transparent;
-}
-
-.page-results .table {
-  background-color: rgb(255, 255, 255);
-}
-.page-results .table a {
-  color: rgb(175, 139, 87);
-  text-decoration: none;
-}
-.page-results .table > :not(caption) > * > * {
-  color: #777;
-}
-.page-results .page-link {
-  color: #777;
-  background-color: rgb(51, 51, 51);
-  border-color: rgb(175, 139, 87);
-}
-.page-results .active > .page-link {
-  color: #777;
-  background-color: rgb(241, 141, 25);
-  border-color: rgb(241, 141, 25);
-}
-
-/*# sourceMappingURL=site.css.map */
+/*# sourceMappingURL=home.css.map */

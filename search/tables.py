@@ -5,8 +5,9 @@ from .models import Individual, Search
 class SearchTable(tables.Table):
     class Meta:
         model = Individual
-        template_name = "django_tables2/bootstrap.html"
+        template_name = "django_tables2/bootstrap5-responsive.html"
         fields = ("id", "name", "title", "link")
+        attrs = {"class": "round table table-sm table-dark table-striped table.bordered table-hover"}
 
     link = tables.Column()
 
