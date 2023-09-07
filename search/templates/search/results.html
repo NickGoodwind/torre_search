@@ -4,9 +4,10 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="page-results flexy">
-    <h1 class="title">Results</h1>
+    <div class="page-results flexy-col start">
+        <h1 class="title">Results</h1>
         {% render_table table %}
+        <a class="btn btn-secondary btn-back" href="{% url 'index' %}">Go Back To Search</a>
     </div>
 {% endblock %}
 

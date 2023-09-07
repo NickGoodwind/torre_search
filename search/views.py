@@ -13,8 +13,8 @@ def index(request):
 
 def search(request):
     # Get query parameters
-    query = request.GET['q']
-    page = request.GET['page']
+    query = request.GET.get('q')
+    page = request.GET.get('page', 1)
     if not query:
         return render(
             request,
