@@ -3,7 +3,7 @@ from django.views import generic
 from django.http import HttpResponse
 from django_tables2 import SingleTableView
 from .models import Individual, Search
-from.tables import HistoryTable, SearchTable
+from .tables import HistoryTable, SearchTable
 import requests, json
 
 
@@ -46,7 +46,7 @@ def search(request):
 
     # Show table
     table = SearchTable(resultSet)
-    table.paginate(page= page, per_page=10)
+    table.paginate(page=page, per_page=10)
     return render(request, "search/results.html", {"table": table, "title": "Search results"})
 
 
