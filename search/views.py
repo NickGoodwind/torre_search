@@ -3,6 +3,7 @@ from django.views import generic
 from django.http import HttpResponse
 from django_tables2 import SingleTableView
 from .models import Individual, Search
+from.tables import HistoryTable, SearchTable
 import requests, json
 
 
@@ -11,6 +12,7 @@ def index(request):
 
 
 def search(request):
+    # Get query parameters
     query = request.GET['q']
     if not query:
         return render(
@@ -22,10 +24,28 @@ def search(request):
         )
 
     # Process search here and add history
+    Search(query=query).save()
+    url = "https://torre.ai/api/entities/_searchStream"
+    data = {
+        "query": query,
+        "identityType": "person",
+        "torreGgId": 149472,
+        "limit": 20,
+        "meta": False,
+    }
+    response = requests.post(url, json=data)
+    response = response.content.decode().split("\n")
 
+    # Create structured result set
+    resultSet = []
+    for obj in response:
+        if obj:
+            individual = json.loads(obj, object_hook=Individual.decode)
+            resultSet.append(individual)
+
+    # Show table
     table = SearchTable(resultSet)
     table.paginate(per_page=10)
-
     return render(request, "search/results.html", {"table": table, "title": "Search results"})
 
 
@@ -46,7 +66,7 @@ class HistoryView(SingleTableView):
 
 
 def favorite(request, pk):
-    return HttpResponse("You're favoriting an individual %s." % pk)
+    return HttpResponse("You're favouring an individual %s." % pk)
 
 
 def save(request, pk):
