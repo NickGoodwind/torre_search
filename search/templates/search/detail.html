@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="page-detail flexy-col">
+        <h1 class="title">{{ object.name }}</h1>
+        <p>{{ object.title }}</p>
+        <div class="btns flexy-row between">
+            <a class="btn btn-secondary">Favorite</a>
+            <a class="btn btn-third">Save</a>
+            <a class="btn btn-danger-outline-inverted" href="{% url 'search/' %}">Go Back To Results</a>
+        </div>
+    </div>
+{% endblock %}

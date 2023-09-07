@@ -6,11 +6,9 @@
 {% block content %}
     <div class="page-results flexy-col start">
         <h1 class="title">Results</h1>
-        {% render_table table %}
+        <div id="container" class="flexy-row" style="width: 100%">
+            {% render_table table %}
+        </div>
         <a class="btn btn-secondary btn-back" href="{% url 'index' %}">Go Back To Search</a>
     </div>
-{% endblock %}
-
-{%  block js %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 {% endblock %}
