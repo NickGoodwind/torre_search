@@ -8,6 +8,7 @@ class SearchTable(tables.Table):
         template_name = "django_tables2/bootstrap5-responsive.html"
         fields = ("id", "name", "title", "link")
         attrs = {"class": "round table table-sm table-dark table-striped table.bordered table-hover"}
+        row_attrs = {"onclick": lambda record, table: f"showDetail({record.id}, {table.context.request.GET.get('q')})"}
 
     link = tables.Column()
 
@@ -17,5 +18,6 @@ class SearchTable(tables.Table):
 class HistoryTable(tables.Table):
     class Meta:
         model = Search
-        template_name = "django_tables2/bootstrap.html"
-        order_by = tables.utils.OrderBy("id")
+        template_name = "django_tables2/bootstrap5-responsive.html"
+        order_by = tables.utils.OrderBy("-datetime")
+        attrs = {"class": "round table table-sm table-dark table-striped table.bordered table-hover"}
