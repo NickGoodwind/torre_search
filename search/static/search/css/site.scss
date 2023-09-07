@@ -88,6 +88,23 @@ label {
 }
 
 .page-results {
+  width: 80%;
+}
+
+.page-history {
+  width: 50%;
+}
+
+.page-results, .page-history {
+
+  & #container {
+    width: 100%;
+
+    & .table-container {
+      width: 100%;
+    }
+  }
+
   & .table {
     background-color: root.$base-color;
 
@@ -101,6 +118,11 @@ label {
     }
   }
 
+  .btn-back {
+    align-self: flex-end;
+    margin-top: 2em;
+  }
+
   .page-link {
     color: root.$base-text-color;
     background-color: root.$main-color;
@@ -112,9 +134,10 @@ label {
     background-color: root.$scnd-color;
     border-color: root.$scnd-color;
   }
+}
 
-  .btn-back {
-    align-self: flex-end;
-    margin-top: 2em;
+.page-detail {
+  & .btns > a {
+    margin: 2em 1em;
   }
 }

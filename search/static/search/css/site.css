@@ -1018,29 +1018,47 @@ label {
   width: 50%;
 }
 
-.page-results .table {
+.page-results {
+  width: 80%;
+}
+
+.page-history {
+  width: 50%;
+}
+
+.page-results #container, .page-history #container {
+  width: 100%;
+}
+.page-results #container .table-container, .page-history #container .table-container {
+  width: 100%;
+}
+.page-results .table, .page-history .table {
   background-color: rgb(255, 255, 255);
 }
-.page-results .table a {
+.page-results .table a, .page-history .table a {
   color: rgb(175, 139, 87);
   text-decoration: none;
 }
-.page-results .table > :not(caption) > * > * {
+.page-results .table > :not(caption) > * > *, .page-history .table > :not(caption) > * > * {
   color: #777;
 }
-.page-results .page-link {
+.page-results .btn-back, .page-history .btn-back {
+  align-self: flex-end;
+  margin-top: 2em;
+}
+.page-results .page-link, .page-history .page-link {
   color: #777;
   background-color: rgb(51, 51, 51);
   border-color: rgb(175, 139, 87);
 }
-.page-results .active > .page-link {
+.page-results .active > .page-link, .page-history .active > .page-link {
   color: #777;
   background-color: rgb(241, 141, 25);
   border-color: rgb(241, 141, 25);
 }
-.page-results .btn-back {
-  align-self: flex-end;
-  margin-top: 2em;
+
+.page-detail .btns > a {
+  margin: 2em 1em;
 }
 
 /*# sourceMappingURL=site.css.map */
