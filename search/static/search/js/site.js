@@ -1,0 +1,3 @@
+const showDetail = (id, query) => {
+
+}

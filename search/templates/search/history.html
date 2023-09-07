@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="page-history flexy-col start">
+        <h1 class="title">Search History</h1>
+        <div id="container" class="flexy-row" style="width: 100%">
+            {% if latest_query %}
+                {% render_table table %}
+            {% else %}
+                <p>No search history available.</p>
+            {% endif %}
+        </div>
+        <a class="btn btn-secondary btn-back" href="{% url 'index' %}">Go Back To Search</a>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,143 @@
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+
+@use 'home' as root;
+@use 'navbar';
+
+/* ----------------------------------------------------------------------------------------
+							PROJECT'S CUSTOM CSS
+---------------------------------------------------------------------------------------- */
+
+html,
+body {
+  background-color: root.$main-color;
+}
+
+label {
+  font-weight: normal;
+}
+
+.wrap {
+  color: white;
+  font-family: 'Orkney Light', ui-monospace;
+  font-size: 20px;
+
+  &.pages {
+    padding: inherit {
+      left: 50px;
+      right: 50px;
+    }
+  }
+
+  & > .container {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+
+    color: white;
+  }
+}
+
+.breadcrumb {
+  margin-top: 25px;
+  width: 50%;
+}
+
+.title {
+  margin: 2% 0 2% 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
+}
+
+.pages-container {
+  @extend %flexy-col;
+
+  margin: auto {
+    top: 2em;
+    bottom: 60px;
+  }
+
+  & .breadcrumb {
+    align-self: flex-end;
+
+    margin-bottom: 0;
+    padding-right: 2em;
+
+    text-align: right;
+    background-color: transparent;
+  }
+}
+
+.page-index {
+  width: 80%;
+  height: 70vh;
+
+  & #search-form {
+    width: 100%;
+
+    & #submit {
+      width: 50%;
+    }
+  }
+}
+
+.page-results {
+  width: 80%;
+}
+
+.page-history {
+  width: 50%;
+}
+
+.page-results, .page-history {
+
+  & #container {
+    width: 100%;
+
+    & .table-container {
+      width: 100%;
+    }
+  }
+
+  & .table {
+    background-color: root.$base-color;
+
+    & a {
+      color: root.$link-color;
+      text-decoration: none;
+    }
+
+    & > :not(caption) > * > * {
+      color: root.$base-text-color;
+    }
+  }
+
+  .btn-back {
+    align-self: flex-end;
+    margin-top: 2em;
+  }
+
+  .page-link {
+    color: root.$base-text-color;
+    background-color: root.$main-color;
+    border-color: root.$link-color;
+  }
+
+  .active > .page-link {
+    color: root.$base-text-color;
+    background-color: root.$scnd-color;
+    border-color: root.$scnd-color;
+  }
+}
+
+.page-detail {
+  & .btns > a {
+    margin: 2em 1em;
+  }
+}

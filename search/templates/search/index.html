@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="page-index flexy-col">
+        <h1 class="title">{{ title }}</h1>
+        <div class="flexy-row" style="width: 50%">
+            <form id="search-form" method="get" action="{% url 'search' %}" class="flexy-col">
+                {% csrf_token %}
+                {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for a name" aria-label="Username"
+                           aria-describedby="basic-addon1" name="q">
+                </div>
+                <div id="submit" class="input-group mb-3">
+                    <input type="submit" class="form-control btn btn-secondary">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
