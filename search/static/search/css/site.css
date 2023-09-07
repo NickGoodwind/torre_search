@@ -468,7 +468,7 @@ a.desc:after {
   padding-bottom: 1em;
 }
 
-.site-error, .footer, .form-basic, .flexy-col, .flexy-row {
+.pages-container, .site-error, .footer, .form-basic, .flexy-col, .flexy-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,7 +482,7 @@ a.desc:after {
   margin-right: -15px;
 }
 
-.site-error, .footer, .form-basic, .flexy-col {
+.pages-container, .site-error, .footer, .form-basic, .flexy-col {
   flex-direction: column;
   align-items: center;
 }
@@ -991,6 +991,20 @@ label {
   position: fixed;
   bottom: 0;
   font-size: 16px;
+}
+
+.pages-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 60px;
+}
+.pages-container .breadcrumb {
+  align-self: flex-end;
+  margin-bottom: 0;
+  padding-right: 2em;
+  text-align: right;
+  background-color: transparent;
 }
 
 .site-error {

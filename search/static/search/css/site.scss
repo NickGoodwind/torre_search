@@ -55,6 +55,27 @@ label {
 	font-size: 16px;
 }
 
+
+.pages-container {
+	@extend %flexy-col;
+	width: 90%;
+
+	margin: auto {
+		top: 2em;
+		bottom: 60px;
+	}
+
+	& .breadcrumb {
+		align-self: flex-end;
+
+		margin-bottom: 0;
+		padding-right: 2em;
+
+		text-align: right;
+		background-color: transparent;
+	}
+}
+
 .site-error {
 	@extend %flexy-col;
 	
