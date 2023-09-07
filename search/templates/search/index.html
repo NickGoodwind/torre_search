@@ -5,11 +5,16 @@
 {% block content %}
     <h1 class="title">{{ title }}</h1>
     <div class="flexy-row">
-        <form method="get" action="{% url 'search' %}">
-        {% csrf_token %}
-        <input type="text" name="q">
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-        <input type="submit">
+        <form method="get" action="{% url 'search' %}" class="flexy-col">
+            {% csrf_token %}
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search for a name" aria-label="Username"
+                       aria-describedby="basic-addon1" name="q">
+            </div>
+            <div class="input-group mb-3">
+                <input type="submit" class="form-control btn btn-secondary">
+            </div>
         </form>
     </div>
 {% endblock %}
