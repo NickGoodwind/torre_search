@@ -9,7 +9,7 @@
 @forward 'root';
 
 /* ----------------------------------------------------------------------------------------
-							ORIGINAL YII2 CSS
+							BASIC CSS
 ---------------------------------------------------------------------------------------- */
 
 html,
@@ -152,43 +152,6 @@ a.desc:after {
     outline: none;
 }
 
-/* ----------------------------------------------------------------------------------------
-							MODIFIED YII2 CSS
----------------------------------------------------------------------------------------- */
-
-.has-success .control-label {
-	color: inherit;
-}
-
-.bootstrap-switch .bootstrap-switch-handle-off, .bootstrap-switch .bootstrap-switch-handle-on {
-	&.bootstrap-switch-primary {
-		@extend %btn-primary;
-	}
-	
-	&.bootstrap-switch-secondary {
-		@extend %btn-secondary;
-	}
-
-	&.bootstrap-switch-third {
-		@extend %btn-third;
-	}
-
-	&.bootstrap-switch-primary-outline {
-		@extend %btn-primary-outline;
-	}
-	
-	&.bootstrap-switch-secondary-outline {
-		@extend %btn-secondary-outline;
-	}
-	
-	&.bootstrap-switch-third-outline {
-		@extend %btn-third-outline;
-	}
-	
-	&.bootstrap-switch-third-outline-inverted {
-		@extend %btn-third-outline-inverted;
-	}
-}
 
 /* ----------------------------------------------------------------------------------------
 							CUSTOM NICKGOODWIND CSS
