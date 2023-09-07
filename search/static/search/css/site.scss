@@ -1,0 +1,148 @@
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+
+@use 'home' as root;
+@use 'navbar';
+
+/* ----------------------------------------------------------------------------------------
+							PROJECT'S CUSTOM CSS
+---------------------------------------------------------------------------------------- */
+
+html,
+body {
+	background-color: root.$main-color;
+}
+
+label {
+	font-weight: normal;
+}
+
+.wrap {
+	color: white;
+	font-family: 'Orkney Light', ui-monospace;
+	font-size: 20px;
+	
+	&.pages {
+		padding: inherit {
+			left: 50px;
+			right: 50px;
+		}
+	}
+
+	& > .container {
+		flex-direction: column;
+		align-items: center;
+		
+		padding: 0;
+		
+		color: white;
+	}
+}
+
+.breadcrumb {
+	margin-top: 25px;
+	width: 50%;
+}
+
+.title {
+	margin: 2% 0 2% 0;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	font-size: 16px;
+}
+
+.site-error {
+	@extend %flexy-col;
+	
+	height: 85vh;
+}
+
+.search-view {
+	width: 90%;
+
+	margin-top: 5vh;
+
+	border-radius: 15px;
+
+	&.box-wrapper {
+		grid-gap: 1em;
+		grid-template-rows: 45vh auto auto;
+		grid-template-columns: auto 7fr;
+
+		padding: 1em;
+	}
+
+	& .product-photo {
+		grid-column: 1;
+		grid-row: 1;
+
+		justify-items: center;
+
+		min-width: 22vw;
+		min-height: 45vh;
+
+		border-radius: 14px;
+
+		background-color: root.$base-color;
+		
+		& img {
+			max-height: 80%;
+			object-fit: contain;
+		}
+	}
+
+	& .product-cart-form {
+		grid-column: 1;
+		grid-row: 2;
+
+		justify-content: flex-start;
+
+		min-height: 45vh;
+		min-width: 45vh;
+
+		border: solid 1px root.$main-color-dim;
+		border-radius: 15px;
+		padding: 1em;
+
+		font-size: 0.8em;
+
+		& div[class*="label"] {
+			align-self: flex-start;
+
+			&:nth-of-type(n+2) {
+				margin-top: 0.5em;
+			}
+		}
+
+		& [id^="amount-"] {
+			margin: 0;
+			
+			max-width: 4em;
+			
+			cursor: default;
+			text-align: center;
+
+			&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+
+			&:active, &:focus, &:hover {
+				color: root.$base-color;
+			}
+		}
+
+		& .actions {
+			align-self: center;
+			margin: 2em;
+		}
+	}
+
+	& .product-description {
+		grid-column: 2;
+		grid-row: 1 / span 3;
+	}
+}

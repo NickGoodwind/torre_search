@@ -1,0 +1,270 @@
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+
+@use 'root';
+
+/* ----------------------------------------------------------------------------------------
+							CUSTOM CSS BUTONS
+---------------------------------------------------------------------------------------- */
+
+.btn {
+	border-radius: 5px;
+	
+	& i {
+		font-size: 1rem;
+	}
+}
+
+.btn-primary, %btn-primary {
+	color: root.$base-color;
+	background-color: root.$main-color;
+	border-color: root.$base-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		background-color: root.$main-color-dim;
+		border-color: root.$base-color;
+		
+		&:focus {
+			background-color: root.$main-color-dim;
+			border-color: root.$base-color;
+		}
+	}
+}
+.open > .dropdown-toggle.btn-primary {
+	background-color: root.$main-color-dim;
+	border-color: root.$base-color;
+	
+	&:focus {
+		background-color: root.$main-color-dim;
+		border-color: root.$base-color;
+	}
+}
+
+.btn-secondary, %btn-secondary {
+	color: root.$scnd-color;
+	background-color: root.$main-color;
+	border-color: root.$scnd-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$scnd-color-dim;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$scnd-color-dim;
+		}
+	}
+}
+
+.open > .dropdown-toggle.btn-secondary {
+	color: root.$base-color;
+	background-color: root.$scnd-color-dim;
+	
+	&:focus {
+		color: root.$base-color;
+		background-color: root.$scnd-color-dim;
+	}
+}
+
+.btn-third, %btn-third {
+	color: root.$thrd-color;
+	background-color: root.$main-color;
+	border-color: root.$thrd-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$thrd-color-dim;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$thrd-color-dim;
+		}
+	}
+}
+
+.open > .dropdown-toggle.btn-third {
+	color: root.$base-color;
+	background-color: root.$thrd-color-dim;
+	
+	&:focus {
+		color: root.$base-color;
+		background-color: root.$thrd-color-dim;
+	}
+}
+
+.btn-primary-outline, %btn-primary-outline {
+	color: root.$main-color;
+	background-color: root.$base-color;
+	border-color: root.$main-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$main-color-dim;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$main-color-dim;
+		}
+	}
+}
+
+.open > .dropdown-toggle.btn-primary-outline {
+	color: root.$base-color;
+	background-color: root.$main-color-dim;
+	
+	&:focus {
+		color: root.$base-color;
+		background-color: root.$main-color-dim;
+	}
+}
+
+.btn-secondary-outline, %btn-secondary-outline {
+	color: root.$scnd-color;
+	background-color: root.$base-color;
+	border-color: root.$scnd-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$scnd-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$scnd-color;
+		}
+	}
+}
+
+.open > .dropdown-toggle.btn-secondary-outline {
+	color: root.$base-color;
+	background-color: root.$scnd-color;
+	
+	&:focus {
+		color: root.$base-color;
+		background-color: root.$scnd-color;
+	}
+}
+
+.btn-third-outline, %btn-third-outline {
+	color: root.$thrd-color;
+	background-color: root.$base-color;
+	border-color: root.$thrd-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$thrd-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$thrd-color;
+		}
+	}
+	
+	&-inverted {
+		color: root.$base-color;
+		background-color: root.$thrd-color;
+		border-color: root.$base-color;
+	}
+}
+
+.open > .dropdown-toggle.btn-third-outline {
+	color: root.$base-color;
+	background-color: root.$thrd-color;
+	
+	&:focus {
+		color: root.$base-color;
+		background-color: root.$thrd-color;
+	}
+}
+
+.btn-success-outline, %btn-success-outline {
+	color: root.$success-color;
+	background-color: root.$main-color;
+	border-color: root.$success-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$success-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$success-color;
+		}
+	}
+	
+	&-inverted {
+		color: root.$base-color;
+		background-color: root.$thrd-color;
+		border-color: root.$base-color;
+	}
+}
+
+.btn-danger-outline, %btn-danger-outline {
+	color: root.$danger-color;
+	background-color: root.$base-color;
+	border-color: root.$danger-color;
+	
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$danger-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$danger-color;
+		}
+	}
+	
+	&-inverted {
+		color: root.$danger-color;
+		background-color: root.$main-color;
+		border-color: root.$danger-color;
+	}
+}
+
+.btn-main {
+	color: root.$scnd-color;
+	background-color: root.$base-color;
+	border-color: root.$scnd-color;
+
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$link-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$link-color;
+		}
+	}
+
+	&-inverted {
+		color: root.$base-color;
+		background-color: root.$main-color;
+		border-color: root.$scnd-color;
+	}
+}
+
+.btn-main-outline {
+	color: root.$link-color;
+	background-color: root.$base-color;
+	border-color: root.$link-color;
+
+	&:hover, &:active, &.active, &:focus {
+		color: root.$base-color;
+		background-color: root.$link-color;
+		
+		&:focus {
+			color: root.$base-color;
+			background-color: root.$link-color;
+		}
+	}
+
+	&-inverted {
+		color: root.$base-color;
+		background-color: root.$link-color;
+		border-color: root.$base-color;
+	}
+}
+
+.btn-group > .btn-fixed {
+	border-right-width: 2px;
+}

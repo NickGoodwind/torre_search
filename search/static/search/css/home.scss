@@ -1,0 +1,361 @@
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+
+@use 'base' as root;
+
+@forward 'base';
+
+/* ----------------------------------------------------------------------------------------
+							PROJECT'S HOMEPAGE CUSTOM CSS
+---------------------------------------------------------------------------------------- */
+
+#loading {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(192, 192, 192, 0.5);
+	background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.site-home {
+	display: none;
+	
+	background-color: root.$main-color;
+	
+	width: 100%;
+    height: 100%;
+
+	.bg-wrap {
+	    clip: rect(0, auto, auto, 0);
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.bg {
+		position: fixed;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100%;
+		background-position: center center;
+		transform: translateZ(0);
+		will-change: transform;
+	}
+}
+
+.intro {
+	display: flex;
+	background-color: root.$main-color;
+	clip: rect(0, auto, auto, 0);
+	
+    width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+
+	text-align: center;
+	color: #f8f8f8;
+	
+	& .bg-wrap {
+		height: 100vh;
+	}
+	
+	& .bg {
+		height: 100vh;
+	}
+	
+	& .logo {
+		z-index: 1;
+		
+	    background-position: center;
+	    background-image: url(../images/logo.png);
+	    background-repeat: no-repeat;
+		background-size: 350px;
+		background-color: rgba(255, 255, 255, 0);
+		
+		height: 350px;
+		width: 350px;
+		
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.site-home .presentation {
+	position: relative;
+	background-color: white;
+	color: root.$main-color;
+	
+	margin-bottom: 0;
+	padding-bottom: 5em;
+		
+	& h1 {
+		font-family: 'Fira Code', ui-monospace;
+		font-weight: 100;
+	}
+	
+	& .lead {
+		width: 70%;
+		margin-top: 2em;
+	}
+	
+	& #btn-main {
+		position: relative;
+		align-self: flex-end;
+	}
+	
+	& .icn {
+		position: absolute;
+		top: 70%;
+	    left: 4%;
+
+		display: block;
+
+	    width: 140px;
+	    height: 140px;
+	
+		background: url("../images/icon2.png") no-repeat;
+		background-size: 100%;
+		
+	    transform: rotate(13deg);
+	}
+}
+
+.transition {
+	background-color: white;
+	
+	width: 100%;
+	height: 300px;
+}
+
+.p_s {
+	background-color: white;
+	
+	margin-bottom: 0;
+	padding-top: 4em;
+	
+	font-size: 22px;
+	color: root.$main-color;
+	
+	& .title {
+		font-size: 50px;
+	}
+	
+	& > .title {
+		margin-bottom: 1em;
+		padding-left: 1em;
+		align-self: flex-start;
+	}
+	
+	& h2 {
+		padding-bottom: 1em;
+		text-align: center;
+	}
+	
+	& p {
+		text-align: justify;
+	}
+}
+
+.preview {
+	align-items: center !important;
+    position: relative;
+
+	height: 600px;
+	width: 100%;
+	
+	&:first-child {
+		padding-top: 2em;
+	}
+	
+	&.display:nth-last-child(4n+2) {
+		margin-bottom: 0;
+	}
+	
+	& .data {
+		width: 40%;
+	}
+}
+
+#webapp_preview.display {
+	height: 500px;
+	
+	color: root.$main-color;
+	
+	& .image {
+	    background-size: 100%;
+		
+		width: 40%;
+		height: 300px;
+		
+		color: white;
+	}
+}
+
+#advertising_preview.display {
+	clip: rect(0, auto, auto, 0);
+	
+	width: 100%;
+	
+	color: white;
+	
+	& .title, .data {
+		position: relative;
+	}
+}
+
+
+#marketing_preview {
+	& .title, .data {
+		position: absolute;
+	}
+	
+	& .title {
+		top: 10%;
+		left: 55%;
+	}
+	
+	& .data {
+		top: 30%;
+		right: 5%;
+	}
+	
+	& .image {
+		position: relative;
+		right: -4.5em;
+		
+		width: 40%;
+		height: 300px;
+	}
+}
+
+.mobile {
+	display: none;
+}
+
+.feats {
+	position: relative;
+	clip: rect(0, auto, auto, 0);
+
+	width: 100%;
+	
+	color: white;
+	
+	& .container {
+		&.additional-inner {
+			padding-top:60px;
+			padding-bottom:70px;
+		}	
+		
+		& .features-title {
+			& .title {
+				font-size: 50px;
+				padding-bottom: 0.5em;
+				color:#FFFFFF;
+			}
+			
+			& .desc {
+				padding-bottom: 1em;
+			}
+		}
+		
+		& .features-border-top {
+			z-index: 1;
+			border-top:1px solid;
+			margin-top:40px;
+			border-color:root.$scnd-color;
+			
+			& .col-md-3 {
+				margin-top:-40px;
+				
+				& .additional-features  {
+					position:relative;
+					color:#FFFFFF;
+					line-height:2;
+					text-align:center;
+					
+					& i {
+						width:80px;
+						height:80px;
+						line-height:80px;
+						color:#ffffff;
+						background-color: root.$scnd-color;
+						font-size:40px;
+						text-align:center;
+						border-radius:50%;
+						-moz-border-radius:50%;
+						-webkit-border-radius:50%;
+						-o-border-radius:50%;
+						-ms-border-radius:50%;
+						
+					}
+					
+					&:hover > i {
+						transform:rotate( 360deg);
+						-moz-transform:rotate( 360deg);
+						-webkit-transform:rotate( 360deg);
+						-o-transform:rotate( 360deg);
+						-ms-transform:rotate( 360deg);
+					}
+					
+					.additional-content {
+						padding:15px 30px;
+						margin-bottom:30px;
+						
+						& h5 {
+							padding:0 10px 5px 0;
+							font-size:18px;
+							color:#ffffff;
+							text-transform:uppercase;
+						}
+					}
+				}
+				
+				&:after, .right-border:before {
+					background-color: root.$scnd-color;
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	align-items: baseline;
+	
+	background-color: root.$main-color;
+	
+	width: 100%;
+	padding: 0 3em;
+	
+	& .title {
+	    top: 2em;
+		color: white;
+		text-align: center;
+		font-size: x-large;
+	}
+	
+	& .process-icon {
+		position: absolute;
+	    top: 9em;
+	    left: 4.8em;
+		
+		background: url('../images/big_icon.png') no-repeat;
+		background-size: 100%;
+		
+		width: 400px;
+		height: 400px;
+	}
+}
