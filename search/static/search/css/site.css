@@ -884,20 +884,6 @@ a.desc:after {
   width: 100%;
 }
 
-.affix.navbar.navbar-inverse {
-  background-color: white;
-  border: 1px solid rgb(241, 141, 25);
-}
-.affix #nav-menu > li > a {
-  color: black;
-}
-.affix .cart {
-  opacity: 1;
-}
-.affix .cart .cart-items {
-  border: solid 1px rgb(241, 141, 25);
-}
-
 .navbar-header {
   display: flex;
   align-items: center;
@@ -906,7 +892,7 @@ a.desc:after {
 #nav-menu > li > a, .navbar-inverse .navbar-nav > li > a {
   color: white;
 }
-#nav-menu > li.active > a, .navbar-inverse .navbar-nav > li.active > a {
+#nav-menu > li > a.nav-link.active, .navbar-inverse .navbar-nav > li > a.nav-link.active {
   background-color: transparent;
   color: rgb(241, 141, 25);
 }

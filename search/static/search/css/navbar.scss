@@ -35,28 +35,6 @@
 	}
 }
 
-.affix {
-	&.navbar.navbar-inverse {
-		background-color: white;
-		border: 1px solid root.$scnd-color;
-	}
-	
-	& #nav-menu > li {
-		& > a {
-			color: black;
-		}
-	}
-	
-	& .cart {
-		opacity: 1;
-		
-		& .cart-items {
-			border: solid 1px root.$scnd_color;
-		}
-	}
-	
-}
-
 .navbar-header {
 	display: flex;
 	align-items: center;
@@ -68,7 +46,7 @@
 			color: white;
 		}
 		
-		&.active > a {
+		& > a.nav-link.active {
 			background-color: transparent;
 			color: root.$scnd-color;
 		}
