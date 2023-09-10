@@ -6,14 +6,14 @@ class SearchTable(tables.Table):
     class Meta:
         model = Individual
         template_name = "django_tables2/bootstrap5-responsive.html"
-        fields = ("id", "name", "title", "link")
+        fields = ("name", "link", "title")
         attrs = {"class": "round table table-sm table-dark table-striped table.bordered table-hover"}
         row_attrs = {"onclick": lambda record, table: f"showDetail({record.id}, {table.context.request.GET.get('q')})"}
 
     link = tables.Column()
 
     def render_link(self, value, record):
-        return format_html(f"<a href=\"{value}\">{record.username}</a>")
+        return format_html(f"<a href=\"{value}\"><i class=\"far fa-share-square\"></i></a>")
 
 class HistoryTable(tables.Table):
     class Meta:
