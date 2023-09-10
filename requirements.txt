@@ -2,3 +2,4 @@ pip
 django
 django-tables2
 django-debug-toolbar
+requests
