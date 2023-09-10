@@ -4,3 +4,4 @@
 composer.lock
 vendor/
 libs
+db.sqlite3
