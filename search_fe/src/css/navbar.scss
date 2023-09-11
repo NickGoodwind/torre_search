@@ -1,0 +1,57 @@
+@use 'root';
+
+.navbar {
+	z-index: 100 !important;
+	width: 100%;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: auto;
+
+	& .navbar-brand {
+		color: root.$scnd-color;
+	}
+	
+	&#navbar {
+		&.navbar-inverse {
+			background-color: rgba(36,36,36,1);
+		}
+		
+		& .logo-pages {
+			border-radius: 5px;
+			
+			width: 140px;
+			height: 94px;
+		}
+	}
+
+	font-family: 'Monserrat Light', ui-monospace;
+	font-size: 16px;
+	
+	&.navbar-inverse {
+		background-color: rgba(0,0,0,0.4);
+		border: none;
+	}
+	
+	& .container {
+		width: 100%;
+	}
+}
+
+#nav-menu, .navbar-inverse .navbar-nav {
+	& > li {
+		& > a, button {
+			color: white;
+		}
+		
+		& > a.nav-link.active, button.nav-link.active {
+			background-color: transparent;
+			color: root.$scnd-color;
+		}
+		
+		& > a:hover, button:hover {
+			color: root.$scnd-color;
+		}
+	}
+}
