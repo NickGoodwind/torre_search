@@ -5,11 +5,10 @@ from django.http import HttpResponse
 from django_tables2 import SingleTableView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework import status
 
-from .models import Individual, Search
 from .serializers import *
 from .tables import HistoryTable, SearchTable
+from .models import Individual, Search
 
 
 # #################################
@@ -20,11 +19,11 @@ def rest_search(request):
     if request.method == 'GET':
         # Execute torre search and load data in persisten DB
         query = request.GET.get('name')
-        if(query):
+        if query:
             Individual.getData(query)
 
         # Prepare and return data for REST endpoint
-        data = Individual.objects.all()
+        data = Individual.objects.all().filter(name__contains=query)[:10]
         serializer = IndividualSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
@@ -33,7 +32,7 @@ def rest_search(request):
 def rest_history(request):
     if request.method == 'GET':
         # Prepare and return data for REST endpoint
-        data = Search.objects.all()
+        data = Search.objects.all().order_by('-datetime')
         serializer = SearchSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
