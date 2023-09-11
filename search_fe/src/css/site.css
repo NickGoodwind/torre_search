@@ -1,0 +1,719 @@
+/** Base color palette **/
+/** Dim color palette **/
+/** Links palette **/
+/** Success, danger, info and warning colors **/
+@font-face {
+  font-family: "Glober thin";
+  src: url("../fonts/Glober Thin Free.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Orkney Regular";
+  src: url("../fonts/Orkney Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Orkney Light";
+  src: url("../fonts/Orkney Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/fira2/FiraCode-Light.woff2") format("woff2"), url("../fonts/fira/FiraCode-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/fira2/FiraCode-Regular.woff2") format("woff2"), url("../fonts/fira/FiraCode-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/fira2/FiraCode-Medium.woff2") format("woff2"), url("../fonts/fira/FiraCode-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/fira2/FiraCode-SemiBold.woff2") format("woff2"), url("../fonts/fira/FiraCode-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/fira2/FiraCode-Bold.woff2") format("woff2"), url("../fonts/fira/FiraCode-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code VF";
+  src: url("../fonts/fira2/FiraCode-VF.woff2") format("woff2-variations"), url("../fonts/fira/FiraCode-VF.woff") format("woff-variations");
+  /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+  font-weight: 300 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monserrat Light";
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Monserrat Extralight";
+  src: url("../fonts/Montserrat-ExtraLight.ttf") format("truetype");
+}
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------
+							CUSTOM CSS BUTONS
+---------------------------------------------------------------------------------------- */
+.btn {
+  border-radius: 5px;
+}
+.btn i {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(255, 255, 255);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+.btn-primary:hover:focus, .btn-primary:active:focus, .btn-primary.active:focus, .btn-primary:focus:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+
+.open > .dropdown-toggle.btn-primary {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+.open > .dropdown-toggle.btn-primary:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-secondary {
+  color: rgb(241, 141, 25);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(241, 141, 25);
+}
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active, .btn-secondary:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+.btn-secondary:hover:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .btn-secondary:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+
+.open > .dropdown-toggle.btn-secondary {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+.open > .dropdown-toggle.btn-secondary:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+
+.btn-third {
+  color: rgb(156, 181, 101);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(156, 181, 101);
+}
+.btn-third:hover, .btn-third:active, .btn-third.active, .btn-third:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+.btn-third:hover:focus, .btn-third:active:focus, .btn-third.active:focus, .btn-third:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+
+.open > .dropdown-toggle.btn-third {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+.open > .dropdown-toggle.btn-third:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+
+.btn-primary-outline {
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(51, 51, 51);
+}
+.btn-primary-outline:hover, .btn-primary-outline:active, .btn-primary-outline.active, .btn-primary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+.btn-primary-outline:hover:focus, .btn-primary-outline:active:focus, .btn-primary-outline.active:focus, .btn-primary-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+
+.open > .dropdown-toggle.btn-primary-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+.open > .dropdown-toggle.btn-primary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+
+.btn-secondary-outline {
+  color: rgb(241, 141, 25);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(241, 141, 25);
+}
+.btn-secondary-outline:hover, .btn-secondary-outline:active, .btn-secondary-outline.active, .btn-secondary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+.btn-secondary-outline:hover:focus, .btn-secondary-outline:active:focus, .btn-secondary-outline.active:focus, .btn-secondary-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+
+.open > .dropdown-toggle.btn-secondary-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+.open > .dropdown-toggle.btn-secondary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+
+.btn-third-outline {
+  color: rgb(156, 181, 101);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(156, 181, 101);
+}
+.btn-third-outline:hover, .btn-third-outline:active, .btn-third-outline.active, .btn-third-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-third-outline:hover:focus, .btn-third-outline:active:focus, .btn-third-outline.active:focus, .btn-third-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-third-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+  border-color: rgb(255, 255, 255);
+}
+
+.open > .dropdown-toggle.btn-third-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.open > .dropdown-toggle.btn-third-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+
+.btn-success-outline {
+  color: rgb(156, 181, 101);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(156, 181, 101);
+}
+.btn-success-outline:hover, .btn-success-outline:active, .btn-success-outline.active, .btn-success-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-success-outline:hover:focus, .btn-success-outline:active:focus, .btn-success-outline.active:focus, .btn-success-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-success-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-danger-outline {
+  color: rgb(249, 128, 112);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(249, 128, 112);
+}
+.btn-danger-outline:hover, .btn-danger-outline:active, .btn-danger-outline.active, .btn-danger-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(249, 128, 112);
+}
+.btn-danger-outline:hover:focus, .btn-danger-outline:active:focus, .btn-danger-outline.active:focus, .btn-danger-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(249, 128, 112);
+}
+.btn-danger-outline-inverted {
+  color: rgb(249, 128, 112);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(249, 128, 112);
+}
+
+.btn-main {
+  color: rgb(241, 141, 25);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(241, 141, 25);
+}
+.btn-main:hover, .btn-main:active, .btn-main.active, .btn-main:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main:hover:focus, .btn-main:active:focus, .btn-main.active:focus, .btn-main:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(241, 141, 25);
+}
+
+.btn-main-outline {
+  color: rgb(175, 139, 87);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(175, 139, 87);
+}
+.btn-main-outline:hover, .btn-main-outline:active, .btn-main-outline.active, .btn-main-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-outline:hover:focus, .btn-main-outline:active:focus, .btn-main-outline.active:focus, .btn-main-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-group > .btn-fixed {
+  border-right-width: 2px;
+}
+
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------
+							BASIC CSS
+---------------------------------------------------------------------------------------- */
+html,
+body {
+  height: 100%;
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wrap > .container {
+  padding: 70px 15px 20px;
+}
+
+.footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.not-set {
+  color: #c55;
+  font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings", ui-monospace;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding-left: 5px;
+}
+
+a.asc:after {
+  content: "\e151";
+}
+
+a.desc:after {
+  content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+  content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+  content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+  content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+  content: "\e156";
+}
+
+.grid-view th,
+.grid-view td:last-child {
+  white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+  min-width: 50px;
+}
+
+.hint-block {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+}
+
+.error-summary {
+  color: #a94442;
+  background: #fdf7f7;
+  border-left: 3px solid #eed3d7;
+  padding: 10px 20px;
+  margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+  padding: 15px;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .nav li > form > button.logout {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+  text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+  outline: none;
+}
+
+/* ----------------------------------------------------------------------------------------
+							CUSTOM NICKGOODWIND CSS
+---------------------------------------------------------------------------------------- */
+.aligned-text-center, .pull-center {
+  text-align: center;
+}
+
+.aligned-text-right {
+  text-align: right;
+}
+
+.transparent {
+  background-color: transparent;
+  z-index: 1;
+}
+
+.colored {
+  color: rgb(241, 141, 25);
+}
+
+.round {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.title {
+  padding-bottom: 1em;
+}
+
+.pages-container, .footer, .form-basic, .flexy-col, .flexy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexy-row > .first-element {
+  margin-left: 20px;
+}
+.flexy-row.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.pages-container, .footer, .form-basic, .flexy-col {
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexy-col > .first-element {
+  margin-top: 20px;
+}
+
+.flexy-row.between, .flexy-col.between {
+  justify-content: space-between;
+}
+.flexy-row.evenly, .flexy-col.evenly {
+  justify-content: space-evenly;
+}
+.flexy-row.start, .flexy-col.start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.flexy-row.end, .flexy-col.end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex-field:nth-child(n) {
+  padding: 0;
+  padding-right: 15px;
+}
+.flex-field:last-child {
+  padding-right: 15px;
+}
+.flex-field:only-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+.flex-field.start {
+  justify-self: flex-start;
+}
+.flex-field.center {
+  justify-self: center;
+}
+.flex-field.end {
+  justify-self: flex-end;
+}
+.flex-field.line {
+  display: flex;
+  flex-grow: 1;
+  margin: 0;
+}
+.flex-field.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.box-wrapper {
+  display: grid;
+  gap: 0;
+}
+
+.form-basic {
+  margin: 0 4em;
+}
+
+.form-buttons {
+  margin-top: 1em;
+}
+
+.footer {
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  background-color: rgb(51, 51, 51);
+  color: rgb(175, 139, 87);
+  font-family: "Glober thin", ui-monospace;
+  font-weight: bold;
+}
+.footer .container {
+  position: relative;
+}
+.footer .container .legal-notice {
+  align-self: baseline;
+  position: absolute;
+  left: 2em;
+}
+.footer .container .legal-notice a {
+  color: rgb(175, 139, 87);
+}
+
+.navbar {
+  z-index: 100 !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  font-family: "Monserrat Light", ui-monospace;
+  font-size: 16px;
+}
+.navbar .navbar-brand {
+  color: rgb(241, 141, 25);
+}
+.navbar#navbar.navbar-inverse {
+  background-color: rgb(36, 36, 36);
+}
+.navbar#navbar .logo-pages {
+  border-radius: 5px;
+  width: 140px;
+  height: 94px;
+}
+.navbar.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+.navbar .container {
+  width: 100%;
+}
+
+#nav-menu > li > a, #nav-menu > li button, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li button {
+  color: white;
+}
+#nav-menu > li > a.nav-link.active, #nav-menu > li button.nav-link.active, .navbar-inverse .navbar-nav > li > a.nav-link.active, .navbar-inverse .navbar-nav > li button.nav-link.active {
+  background-color: transparent;
+  color: rgb(241, 141, 25);
+}
+#nav-menu > li > a:hover, #nav-menu > li button:hover, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li button:hover {
+  color: rgb(241, 141, 25);
+}
+
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------
+							PROJECT'S CUSTOM CSS
+---------------------------------------------------------------------------------------- */
+html,
+body {
+  background-color: rgb(51, 51, 51);
+}
+
+label {
+  font-weight: normal;
+}
+
+.wrap {
+  color: white;
+  font-family: "Orkney Light", ui-monospace;
+  font-size: 20px;
+}
+.wrap.pages {
+  padding: inherit;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.wrap > .container {
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  color: white;
+}
+
+.breadcrumb {
+  margin-top: 25px;
+  width: 50%;
+}
+
+.title {
+  margin: 2% 0 2% 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
+}
+
+.pages-container {
+  height: 100vh;
+  padding-top: 3em;
+  padding-bottom: 60px;
+}
+.pages-container .breadcrumb {
+  align-self: flex-end;
+  margin-bottom: 0;
+  padding-right: 2em;
+  text-align: right;
+  background-color: transparent;
+}
+
+.page-index {
+  width: 80%;
+  height: 70vh;
+}
+.page-index #page-container {
+  width: 50%;
+}
+.page-index #page-container #search-form {
+  width: 100%;
+}
+.page-index #page-container #search-form #submit {
+  width: 50%;
+}
+
+.page-results {
+  width: 80%;
+}
+
+.page-history {
+  width: 50%;
+}
+
+.page-results #page-container, .page-history #page-container {
+  width: 100%;
+}
+.page-results #page-container .table-container, .page-history #page-container .table-container {
+  width: 90%;
+}
+.page-results .table, .page-history .table {
+  background-color: rgb(255, 255, 255);
+}
+.page-results .table th, .page-history .table th {
+  padding-left: 1em;
+}
+.page-results .table td, .page-history .table td {
+  padding-left: 2em;
+}
+.page-results .table a, .page-history .table a {
+  color: rgb(175, 139, 87);
+  text-decoration: none;
+}
+.page-results .table > :not(caption) > * > *, .page-history .table > :not(caption) > * > * {
+  color: #777;
+}
+.page-results .btn-back, .page-history .btn-back {
+  align-self: flex-end;
+  margin-top: 2em;
+}
+.page-results .page-link, .page-history .page-link {
+  color: #777;
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(175, 139, 87);
+}
+.page-results .active > .page-link, .page-history .active > .page-link {
+  color: #777;
+  background-color: rgb(241, 141, 25);
+  border-color: rgb(241, 141, 25);
+}
+
+.page-detail .btns > a {
+  margin: 2em 1em;
+}
+
+/*# sourceMappingURL=site.css.map */

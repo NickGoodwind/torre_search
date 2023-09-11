@@ -58,8 +58,9 @@ label {
 .pages-container {
   @extend %flexy-col;
 
-  margin: auto {
-    top: 2em;
+  height: 100vh;
+  padding: {
+    top: 3em;
     bottom: 60px;
   }
 

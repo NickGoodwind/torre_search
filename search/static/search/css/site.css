@@ -306,29 +306,10 @@ body {
   height: 100%;
 }
 
-body.blank {
-  display: flex;
-  padding: 40px 0;
-}
-
 .wrap {
   min-height: 100%;
   height: auto;
-  margin: 0 auto -60px;
-  padding: 0 0 60px;
-}
-
-body.blank .wrap {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  margin: -40px auto;
-  padding: 15px;
-}
-
-body.blank .wrap > div {
-  width: 100%;
+  margin: 0 auto;
 }
 
 .wrap > .container {
@@ -868,6 +849,9 @@ a.desc:after {
   font-family: "Monserrat Light", ui-monospace;
   font-size: 16px;
 }
+.navbar .navbar-brand {
+  color: rgb(241, 141, 25);
+}
 .navbar#navbar.navbar-inverse {
   background-color: rgb(36, 36, 36);
 }
@@ -884,67 +868,15 @@ a.desc:after {
   width: 100%;
 }
 
-.affix.navbar.navbar-inverse {
-  background-color: white;
-  border: 1px solid rgb(241, 141, 25);
-}
-.affix #nav-menu > li > a {
-  color: black;
-}
-.affix .cart {
-  opacity: 1;
-}
-.affix .cart .cart-items {
-  border: solid 1px rgb(241, 141, 25);
-}
-
-.navbar-header {
-  display: flex;
-  align-items: center;
-}
-
 #nav-menu > li > a, .navbar-inverse .navbar-nav > li > a {
   color: white;
 }
-#nav-menu > li.active > a, .navbar-inverse .navbar-nav > li.active > a {
+#nav-menu > li > a.nav-link.active, .navbar-inverse .navbar-nav > li > a.nav-link.active {
   background-color: transparent;
   color: rgb(241, 141, 25);
 }
 #nav-menu > li > a:hover, .navbar-inverse .navbar-nav > li > a:hover {
   color: rgb(241, 141, 25);
-}
-
-.cart {
-  position: absolute;
-  right: 0.8em;
-  top: 2.3em;
-  padding-top: 0.5em;
-  padding-left: 0.4em;
-  border-radius: 1em;
-  background-color: rgb(241, 141, 25);
-  opacity: 0.5;
-  color: white;
-  font-size: 20px;
-  height: 2em;
-  width: 2em;
-}
-.cart:hover {
-  color: rgba(0, 0, 0, 0.4);
-}
-.cart .cart-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -0.6em;
-  right: -0.6em;
-  border-radius: 0.75em;
-  background-color: white;
-  color: black;
-  font-family: "Monserrat Light", ui-monospace;
-  font-size: 14px;
-  width: 1.5em;
-  height: 1.5em;
 }
 
 /* ----------------------------------------------------------------------------------------
@@ -995,9 +927,9 @@ label {
 }
 
 .pages-container {
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 60px;
+  height: 100vh;
+  padding-top: 3em;
+  padding-bottom: 60px;
 }
 .pages-container .breadcrumb {
   align-self: flex-end;
