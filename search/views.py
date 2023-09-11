@@ -22,6 +22,9 @@ def rest_search(request):
         if query:
             Individual.getData(query)
 
+        # Save search history
+        Search.saveHistory(query)
+
         # Prepare and return data for REST endpoint
         data = Individual.objects.all().filter(name__contains=query)[:10]
         serializer = IndividualSerializer(data, context={'request': request}, many=True)
