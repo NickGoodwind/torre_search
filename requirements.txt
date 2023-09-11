@@ -3,5 +3,5 @@ django
 django-tables2
 django-debug-toolbar
 requests
-rest_framework
+djangorestframework
 django-cors-headers
