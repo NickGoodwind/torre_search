@@ -25,7 +25,9 @@ SECRET_KEY = "django-insecure-pjdo#1d++vslr*!1sm)k41it-blla(=k5x51!ht-uv=^$ow9ge
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "torre.test",
+]
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
