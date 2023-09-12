@@ -641,8 +641,8 @@ label {
 }
 
 .pages-container {
-  height: 100vh;
-  padding-top: 3em;
+  height: 100%;
+  margin-top: 3em;
   padding-bottom: 60px;
 }
 .pages-container .breadcrumb {

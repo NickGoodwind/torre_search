@@ -58,11 +58,9 @@ label {
 .pages-container {
   @extend %flexy-col;
 
-  height: 100vh;
-  padding: {
-    top: 3em;
-    bottom: 60px;
-  }
+  height: 100%;
+  margin-top: 3em;
+  padding-bottom: 60px;
 
   & .breadcrumb {
     align-self: flex-end;
