@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {Table} from "reactstrap";
-import IndividualsTable from "./IndividualsTable";
 import axios from "axios";
 import {API_URL, HISTORY_END_POINT} from "../constants";
 import {Link} from "react-router-dom";

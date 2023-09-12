@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import axios from "axios";
-import {API_URL, SEARCH_END_POINT} from "../constants";
 import Nav from "./Nav";
 import Page from "./Page";
 
