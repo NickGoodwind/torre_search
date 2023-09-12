@@ -5,8 +5,26 @@ import {API_URL, SEARCH_END_POINT} from "../constants";
 import {Link} from "react-router-dom";
 
 class IndividualsTable extends Component {
+    state = {
+        called: false,
+        individuals: [],
+    }
+
+    componentDidMount() {
+        if(this.state.called === false) {
+            this.search();
+            console.log(this.state.individuals)
+        }
+    }
+
+    search() {
+        axios.get(API_URL + SEARCH_END_POINT + window.location.search).then((res) => {
+            this.setState({individuals: res.data, called: true});
+        });
+    }
+
     render() {
-        const results = this.props.individuals;
+        const results = this.state.individuals;
 
         return (
             <div className="table-container table-responsive flexy-col">

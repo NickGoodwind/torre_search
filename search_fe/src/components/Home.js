@@ -3,32 +3,12 @@ import Nav from "./Nav";
 import Page from "./Page";
 
 class Home extends Component {
-    state = {
-        page: "index",
-        individuals: []
-    }
-
-    componentDidMount() {
-        this.resetState();
-    }
-
-    resetState = () => {
-        this.updateRequest("index")
-    }
-
-    updateRequest = (page, query = undefined, res = []) => {
-        let data = res.data;
-        this.setState({page: page, individuals: data});
-        query = query !== undefined ? query : "";
-        window.history.replaceState(null, "Torres Test App", "/" + page + query);
-    }
-
     render() {
         return (
             <>
                 <Nav/>
                 <div className="pages-container">
-                    <Page page={this.state.page} updateRequest={this.updateRequest} individuals={this.state.individuals}/>
+                    <Page page={this.props.page}/>
                 </div>
                 <footer className="footer">
                     <div className="container flexy-row">

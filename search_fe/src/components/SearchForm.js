@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import axios from "axios";
 import {Form, FormGroup, Input} from "reactstrap";
-import {API_URL, SEARCH_END_POINT} from "../constants";
 
 class SearchForm extends Component {
     state = {
@@ -10,14 +8,6 @@ class SearchForm extends Component {
 
     onChange = (event) => {
         this.setState({[event.target.name]: event.target.value});
-    };
-
-    search = (event) => {
-        event.preventDefault();
-        let query = "?name=" + this.state.name;
-        axios.get(API_URL + SEARCH_END_POINT + query).then((res) => {
-            this.props.updateRequest("search", query, res);
-        });
     };
 
     defaultIfEmpty = (value) => {
