@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {Table} from "reactstrap";
-import IndividualsTable from "./IndividualsTable";
 import axios from "axios";
 import {API_URL, HISTORY_END_POINT} from "../constants";
+import {Link} from "react-router-dom";
 
 class HistoryTable extends Component {
     state = {
@@ -95,9 +95,9 @@ class HistoryTable extends Component {
                 <Table className="round table table-sm table-dark table-striped table.bordered table-hover">
                     <thead>
                     <tr>
-                        <th><a>ID</a></th>
-                        <th><a>Date Of Search</a></th>
-                        <th><a>Query</a></th>
+                        <th><a href="#">ID</a></th>
+                        <th><a href="#">Date Of Search</a></th>
+                        <th><a href="#">Query</a></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -107,9 +107,9 @@ class HistoryTable extends Component {
                 <div style={{float: 'right'}}>
                     {this.pagination()}
                 </div>
-                <button className="btn btn-secondary btn-back" onClick={() => this.props.updateRequest("index", [])}>
+                <Link className="btn btn-secondary btn-back" to="/">
                     Go Back To Search
-                </button>
+                </Link>
             </div>
         );
     }

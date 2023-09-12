@@ -4,21 +4,22 @@ import IndividualsTable from "./IndividualsTable";
 import HistoryTable from "./HistoryTable";
 
 class Page extends Component {
+
     render() {
         const page = this.props.page;
 
         let pageClass = "page-index flexy-col";
         let pageTitle = "My amazing contact finder in Torre.ai";
-        let pageContent = <SearchForm updateRequest={this.props.updateRequest}/>;
+        let pageContent = <SearchForm/>;
+
         if (page === "search") {
             pageClass = "page-results flexy-col start";
             pageTitle = "Search Results";
-            pageContent =
-                <IndividualsTable individuals={this.props.individuals} updateRequest={this.props.updateRequest}/>;
+            pageContent = <IndividualsTable/>;
         } else if (page === "history") {
             pageClass = "page-history flexy-col start";
             pageTitle = "Search History";
-            pageContent = <HistoryTable updateRequest={this.props.updateRequest}/>;
+            pageContent = <HistoryTable/>;
         }
 
         return (
