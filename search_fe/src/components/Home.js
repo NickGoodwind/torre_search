@@ -28,7 +28,7 @@ class Home extends Component {
     render() {
         return (
             <>
-                <Nav updateRequest={this.updateRequest}/>
+                <Nav/>
                 <div className="pages-container">
                     <Page page={this.state.page} updateRequest={this.updateRequest} individuals={this.state.individuals}/>
                 </div>

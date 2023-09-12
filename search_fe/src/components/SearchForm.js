@@ -26,7 +26,7 @@ class SearchForm extends Component {
 
     render() {
         return (
-            <Form id="search-form" className="flexy-col" onSubmit={this.search}>
+            <Form id="search-form" className="flexy-col" action="/search">
                 <FormGroup className="input-group mb-3">
                     <Input type="text" name="name" onChange={this.onChange}
                            placeholder="Search for a name"

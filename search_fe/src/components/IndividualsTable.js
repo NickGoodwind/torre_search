@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Table} from "reactstrap";
 import axios from "axios";
 import {API_URL, SEARCH_END_POINT} from "../constants";
+import {Link} from "react-router-dom";
 
 class IndividualsTable extends Component {
     render() {
@@ -35,7 +36,7 @@ class IndividualsTable extends Component {
                     )}
                     </tbody>
                 </Table>
-                <a className="btn btn-secondary btn-back" href="">Go Back To Search</a>
+                <Link className="btn btn-secondary btn-back" to="/">Go Back To Search</Link>
             </div>
         );
     }
