@@ -1,0 +1,45 @@
+/** Base color palette **/
+/** Dim color palette **/
+/** Links palette **/
+/** Success, danger, info and warning colors **/
+.navbar {
+  z-index: 100 !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  font-family: "Monserrat Light", ui-monospace;
+  font-size: 16px;
+}
+.navbar .navbar-brand {
+  color: rgb(241, 141, 25);
+}
+.navbar#navbar.navbar-inverse {
+  background-color: rgb(36, 36, 36);
+}
+.navbar#navbar .logo-pages {
+  border-radius: 5px;
+  width: 140px;
+  height: 94px;
+}
+.navbar.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+.navbar .container {
+  width: 100%;
+}
+
+#nav-menu > li > a, #nav-menu > li button, .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li button {
+  color: white;
+}
+#nav-menu > li > a.nav-link.active, #nav-menu > li button.nav-link.active, .navbar-inverse .navbar-nav > li > a.nav-link.active, .navbar-inverse .navbar-nav > li button.nav-link.active {
+  background-color: transparent;
+  color: rgb(241, 141, 25);
+}
+#nav-menu > li > a:hover, #nav-menu > li button:hover, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li button:hover {
+  color: rgb(241, 141, 25);
+}
+
+/*# sourceMappingURL=navbar.css.map */

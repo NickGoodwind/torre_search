@@ -1,0 +1,241 @@
+/** Base color palette **/
+/** Dim color palette **/
+/** Links palette **/
+/** Success, danger, info and warning colors **/
+/* ----------------------------------------------------------------------------------------
+							REQUIRED CLAUSES
+---------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------
+							CUSTOM CSS BUTONS
+---------------------------------------------------------------------------------------- */
+.btn {
+  border-radius: 5px;
+}
+.btn i {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(255, 255, 255);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+.btn-primary:hover:focus, .btn-primary:active:focus, .btn-primary.active:focus, .btn-primary:focus:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+
+.open > .dropdown-toggle.btn-primary {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+.open > .dropdown-toggle.btn-primary:focus {
+  background-color: rgb(81, 81, 81);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-secondary {
+  color: rgb(241, 141, 25);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(241, 141, 25);
+}
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active, .btn-secondary:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+.btn-secondary:hover:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .btn-secondary:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+
+.open > .dropdown-toggle.btn-secondary {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+.open > .dropdown-toggle.btn-secondary:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(241, 141, 25, 0.7);
+}
+
+.btn-third {
+  color: rgb(156, 181, 101);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(156, 181, 101);
+}
+.btn-third:hover, .btn-third:active, .btn-third.active, .btn-third:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+.btn-third:hover:focus, .btn-third:active:focus, .btn-third.active:focus, .btn-third:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+
+.open > .dropdown-toggle.btn-third {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+.open > .dropdown-toggle.btn-third:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(156, 181, 101, 0.5);
+}
+
+.btn-primary-outline {
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(51, 51, 51);
+}
+.btn-primary-outline:hover, .btn-primary-outline:active, .btn-primary-outline.active, .btn-primary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+.btn-primary-outline:hover:focus, .btn-primary-outline:active:focus, .btn-primary-outline.active:focus, .btn-primary-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+
+.open > .dropdown-toggle.btn-primary-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+.open > .dropdown-toggle.btn-primary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 81, 81);
+}
+
+.btn-secondary-outline {
+  color: rgb(241, 141, 25);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(241, 141, 25);
+}
+.btn-secondary-outline:hover, .btn-secondary-outline:active, .btn-secondary-outline.active, .btn-secondary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+.btn-secondary-outline:hover:focus, .btn-secondary-outline:active:focus, .btn-secondary-outline.active:focus, .btn-secondary-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+
+.open > .dropdown-toggle.btn-secondary-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+.open > .dropdown-toggle.btn-secondary-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 25);
+}
+
+.btn-third-outline {
+  color: rgb(156, 181, 101);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(156, 181, 101);
+}
+.btn-third-outline:hover, .btn-third-outline:active, .btn-third-outline.active, .btn-third-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-third-outline:hover:focus, .btn-third-outline:active:focus, .btn-third-outline.active:focus, .btn-third-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-third-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+  border-color: rgb(255, 255, 255);
+}
+
+.open > .dropdown-toggle.btn-third-outline {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.open > .dropdown-toggle.btn-third-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+
+.btn-success-outline {
+  color: rgb(156, 181, 101);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(156, 181, 101);
+}
+.btn-success-outline:hover, .btn-success-outline:active, .btn-success-outline.active, .btn-success-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-success-outline:hover:focus, .btn-success-outline:active:focus, .btn-success-outline.active:focus, .btn-success-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+}
+.btn-success-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(156, 181, 101);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-danger-outline {
+  color: rgb(249, 128, 112);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(249, 128, 112);
+}
+.btn-danger-outline:hover, .btn-danger-outline:active, .btn-danger-outline.active, .btn-danger-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(249, 128, 112);
+}
+.btn-danger-outline:hover:focus, .btn-danger-outline:active:focus, .btn-danger-outline.active:focus, .btn-danger-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(249, 128, 112);
+}
+.btn-danger-outline-inverted {
+  color: rgb(249, 128, 112);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(249, 128, 112);
+}
+
+.btn-main {
+  color: rgb(241, 141, 25);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(241, 141, 25);
+}
+.btn-main:hover, .btn-main:active, .btn-main.active, .btn-main:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main:hover:focus, .btn-main:active:focus, .btn-main.active:focus, .btn-main:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(241, 141, 25);
+}
+
+.btn-main-outline {
+  color: rgb(175, 139, 87);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(175, 139, 87);
+}
+.btn-main-outline:hover, .btn-main-outline:active, .btn-main-outline.active, .btn-main-outline:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-outline:hover:focus, .btn-main-outline:active:focus, .btn-main-outline.active:focus, .btn-main-outline:focus:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+}
+.btn-main-outline-inverted {
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 139, 87);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn-group > .btn-fixed {
+  border-right-width: 2px;
+}
+
+/*# sourceMappingURL=buttons.css.map */

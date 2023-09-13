@@ -25,18 +25,6 @@ sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-pjdo#1d++vslr*!1sm)k41it-blla(=k5x51!ht-uv=^$ow9ge"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "torre.test",
-]
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,7 +38,6 @@ INSTALLED_APPS = [
     "django_tables2",
     'rest_framework',
     'corsheaders',
-    # "debug_toolbar",
     # Project apps
     "search",
 ]
@@ -58,10 +45,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -133,12 +118,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
-
-# DEV env changes to cors policies
-CORS_ORIGIN_ALLOW_ALL = True
