@@ -13,7 +13,7 @@ class SearchTable(tables.Table):
     link = tables.Column()
 
     def render_link(self, value, record):
-        return format_html(f"<a href=\"{value}\"><i class=\"far fa-share-square\"></i></a>")
+        return format_html(f"<a href=\"{value}\" target=\"_blank\"><i class=\"far fa-share-square\"></i></a>")
 
 class HistoryTable(tables.Table):
     class Meta:

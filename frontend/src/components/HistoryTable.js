@@ -47,10 +47,10 @@ class HistoryTable extends Component {
                     </td>
                 </tr>
             ) : (
-                historyChunk.map((entry, index) => {
+                historyChunk.map((entry) => {
                     return (
-                        <tr key={entry.pk}>
-                            <td>{entry.pk}</td>
+                        <tr key={entry.id}>
+                            <td>{entry.id}</td>
                             <td>{this.formatDate(entry.datetime)}</td>
                             <td>{entry.query}</td>
                         </tr>

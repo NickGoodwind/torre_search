@@ -46,6 +46,7 @@ class Individual(models.Model):
         return result
 
     # Create/update the Individual based on the json object sent by Torre.ai
+    @staticmethod
     def create_or_update(obj):
         name = obj['name']
         username = obj['username']
