@@ -1,7 +1,11 @@
+.DS_Store
 .idea
 .vscode
-.DS_Store
+
 composer.lock
-vendor/
-libs
 db.sqlite3
+
+build/
+libs/
+node_modules/
+vendor/
