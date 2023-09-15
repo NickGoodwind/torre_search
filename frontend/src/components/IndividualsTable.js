@@ -45,10 +45,10 @@ class IndividualsTable extends Component {
                         </tr>
                     ) : (
                         results.map(person => (
-                            <tr key={person.id}>
-                                <td>{person.name}</td>
-                                <td>{person.title}</td>
-                                <td><a href={person.link}><i className="far fa-share-square"></i></a></td>
+                            <tr key={person['pk']}>
+                                <td>{person['name']}</td>
+                                <td>{person['title']}</td>
+                                <td><a href={person['link']}><i className="far fa-share-square"></i></a></td>
                             </tr>
                         ))
                     )}
